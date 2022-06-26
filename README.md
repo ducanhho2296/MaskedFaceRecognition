@@ -11,7 +11,7 @@ After that, Create Model Arcface (backbone is Resnet34) with pretrained weight, 
 ![image](https://user-images.githubusercontent.com/92146886/175832147-82cba1e1-3a91-44aa-be86-c4adbd1f8e88.png)
 ![image](https://user-images.githubusercontent.com/92146886/175832881-975cd5f4-7359-4f22-b419-ab7e8b40aa1c.png)
 
-At this task, I omitted the last layer (fully connected layer of resnet34, which can be used for classifying task) and replace with Batch Norm. layer to take the face encode vector for step 3.
+At this task, I omitted the last layer (fully connected layer of resnet34, which can be used for classifying task) and adding a Batch Norm. layer to take the face encode vector for step 3.
 
 3. Calculate Cosine similarity between vector embeddings
 
