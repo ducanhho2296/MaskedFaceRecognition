@@ -1,5 +1,5 @@
 # Masked-Face-Recognition-Challenge
-This Repo was created to attend to the Webface260M Masked Face Recognition Challenge.
+This Repo was created for the Webface260M Masked Face Recognition Challenge project.
 In this session, I used the Retinaface-Resnet50 model for face detection task and a pretrained weights of the model Resnet34 for recognition task.
 
 The model Arcface is based on the implementation of inightface with Keras version of Peteryu: https://github.com/peteryuX/arcface-tf2
