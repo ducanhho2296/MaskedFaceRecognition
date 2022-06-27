@@ -1,6 +1,6 @@
 # Masked-Face-Recognition-Challenge
 This Repo was created for the Webface260M Masked Face Recognition Challenge project.
-In this session, I used the Retinaface-Resnet50 model for face detection task and a pretrained weights of the model Resnet34 using Arcface loss function and Local Binary Pattern (LBP) for recognition task.
+In this session, I used the Retinaface-Resnet50 model for face detection task and a pretrained weights of the model Resnet34 using Arcface loss function and Local Binary Pattern (LBP) for recognition task as follow the paper: Masked face recognition with convolutional neural networks and local binary patterns
 
 The Pipeline of algorithm:
 1.  Using the pre-trained Resnet50.onnx model to detect and extract cropped face and also Bounding Boxes. The cropped face will be fed in Arcface model. The bounding boxes will be used in LBP task.
@@ -29,6 +29,6 @@ References:
 - The model Arcface is based on the implementation of Insightface with Keras version of PeteryuX and Deepface: 
 https://github.com/peteryuX/arcface-tf2 and https://github.com/serengil/deepface/blob/master/deepface/basemodels/ArcFace.py
 
-- The model Resnet34 was built based on Insightface team: https://github.com/deepinsight/insightface/tree/master/recognition. 
+- The model Resnet34 was built based on the research of Insightface team: https://github.com/deepinsight/insightface/tree/master/recognition. 
 
 - The link to download pretrained model: https://github.com/leondgarse/Keras_insightface
