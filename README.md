@@ -21,7 +21,7 @@ At this task, I omitted the last layer (fully connected layer of resnet34, which
 - If 0.35 <= distance < 0.7: Using LBP method to verify if this is the same person or not
 - Else: the face is unknown, this is not the same person
 
-4. The faces which have distaces between 0.35 and 0.7 will be stored in an array and using Dlib to extract ROI of the eyebrow and eye region and then store in an array. Using LBP method to compare if this is the same person. (not done yet)
+4. The faces which have distaces between 0.35 and 0.7 will be stored in an array and using Dlib to extract ROI of the eyebrow and eye region and then store in an array and then using LBP method to compare if this is the same person. (not done yet)
 
 References:
 - Paper: https://rdcu.be/cQqTn.
