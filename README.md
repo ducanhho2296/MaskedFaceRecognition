@@ -27,7 +27,7 @@ At this task, I omitted the last layer (fully connected layer of resnet34, which
 ![image](https://user-images.githubusercontent.com/92146886/177043975-4f78cf7a-1711-4721-83ab-c80a4bae4a12.png)
 
 
-The extracted self-defined ROIs will be encoded in LBP code and then output histogram of each ROI, the histograms are concatenated into a big histogram.
+The extracted self-defined ROIs will be encoded in LBP code and then output histogram of each ROI, thus the histograms are concatenated into a big histogram.
 
 ![image](https://user-images.githubusercontent.com/92146886/177043628-4c7b872a-ea7c-429f-b04b-9636346196c6.png)
 
