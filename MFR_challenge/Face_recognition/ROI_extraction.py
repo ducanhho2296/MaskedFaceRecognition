@@ -29,6 +29,7 @@ def show_img(img_path1, img_path2):
     plt.axis('off')
     plt.title("Second")
 
+#extract ROI using dlib detector
 def search_landmark(image_path):
     img = plt.imread(image_path)
     face_detect = dlib.get_frontal_face_detector()
