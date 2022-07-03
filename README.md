@@ -22,7 +22,16 @@ At this task, I omitted the last layer (fully connected layer of resnet34, which
 - If 0.35 <= distance < 0.7: Using LBP method to verify if this is the same person or not
 - Else: the face is unknown, this is not the same person
 
-4. The faces which have distaces between 0.35 and 0.7 will be stored in an array and using Dlib to extract ROI of the eyebrow and eye region and then store in an array and then using LBP method to compare if this is the same person. (not done yet)
+4. The faces which have distaces between 0.35 and 0.7 will be stored in an array and using Dlib to extract Region Of Interest (ROI) of the eyebrow and eye region and then store in an array and then using LBP method to compare if this is the same person. 
+
+![image](https://user-images.githubusercontent.com/92146886/177043975-4f78cf7a-1711-4721-83ab-c80a4bae4a12.png)
+
+
+The extracted self-defined ROIs will be encoded in LBP code and then output histogram of each ROI, the histograms are concatenated into a big histogram.
+
+![image](https://user-images.githubusercontent.com/92146886/177043628-4c7b872a-ea7c-429f-b04b-9636346196c6.png)
+
+After that, using Cosine distance function to calculate distance between histogram of faces, which are already stored in an array. The shorter the distance, the more similar the faces are.
 
 ### References:
 - Paper: https://rdcu.be/cQqTn.
