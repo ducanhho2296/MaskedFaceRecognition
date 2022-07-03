@@ -1,5 +1,5 @@
-tensorflow-gpu>=2.7.1
-opencv-python==4.1.1.26
+tensorflow-gpu
+opencv-python
 dlib
 imutils
 numpy
