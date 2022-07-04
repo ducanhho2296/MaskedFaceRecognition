@@ -31,7 +31,7 @@ The extracted self-defined ROIs will be encoded in LBP code and then output hist
 
 ![image](https://user-images.githubusercontent.com/92146886/177043628-4c7b872a-ea7c-429f-b04b-9636346196c6.png)
 
-After that, using Cosine distance function to calculate distance between histogram of faces, which are already stored in an array. The shorter the distance, the more similar the faces are.
+After that, using Cosine distance function to calculate distance between histogram of faces, which are already stored in an array. We calculate distances of all faces in the array, the shorter the distance, the more similar the faces are.
 
 ### References:
 - Paper: https://rdcu.be/cQqTn.
