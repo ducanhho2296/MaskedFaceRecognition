@@ -8,7 +8,7 @@ In this session, I used the Retinaface-Resnet50 model for face detection task an
 
 2.  Preprocessing face input (target_size = (112,112)) and normalize the face images to range [0,1].
 
-After that, Create Model Arcface (backbone is Resnet34 with pretrained weight), which output the face embedding.
+After that, Create Model Arcface (backbone is Resnet34 with pretrained weight for Transferlearning Arcface model), which output the face embedding.
 
 ![image](https://user-images.githubusercontent.com/92146886/175832147-82cba1e1-3a91-44aa-be86-c4adbd1f8e88.png)
 ![image](https://user-images.githubusercontent.com/92146886/175832881-975cd5f4-7359-4f22-b419-ab7e8b40aa1c.png)
