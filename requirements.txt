@@ -4,3 +4,4 @@ dlib
 imutils
 numpy
 collections
+git clone https://github.com/kb22/Create-Face-Data-from-Images.git
