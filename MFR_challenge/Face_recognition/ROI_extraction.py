@@ -103,7 +103,16 @@ def extract_ROI(img_path, shape_predictor_68_face_landmarks_path):
     hist2, img_lbp2 = calculate_LBP(roi_tuple[2])
     hist3, img_lbp3 = calculate_LBP(roi_tuple[3])
 
-    
+    #convert histogram in list 
+    hist0 = list(hist0)
+    hist1 = list(hist1)
+    hist2 = list(hist2)
+    hist3 = list(hist3)
+
+    #concatenate histograms into a histogram
+    hist = hist0 + hist1 + hist2 + hist3
+
+    return hist
     
 
  #------- encode ROI of faces in LBP and plot histogram-------------
