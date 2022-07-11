@@ -116,7 +116,3 @@ def preprocess_img(img, target_size=(112, 112),
 	# else:
   return img_pixels
 
-def forward_image(img_path):
-  
-  img = preprocess_img(img_path, target_size=(112, 112))
-  return img
