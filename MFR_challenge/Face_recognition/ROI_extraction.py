@@ -95,7 +95,7 @@ def extract_ROI(img_path, shape_predictor_68_face_landmarks_path):
         roi_tuple.append(roi)
         clone_tuple.append(img_clone)
 
-    return roi_tuple, clone_tuple
+    
     
 
  #------- encode ROI of faces in LBP and plot histogram-------------
