@@ -9,7 +9,7 @@ import requests
 from tensorflow import keras
 from tensorflow.keras.preprocessing.image import load_img, save_img, img_to_array
 from tensorflow.keras.applications.imagenet_utils import preprocess_input
-from tensorflow.keras.preprocessing import image
+from tensorflow.keras.preprocessing import img_process
 
 
 
@@ -51,14 +51,6 @@ def preprocess_img(img, target_size=(112, 112),
   img = load_image(img)
   base_img = img.copy()
 
-  # img, region = detect_face(img = img,
-  #                           detector_backend = detector_backend, 
-  #                           grayscale = grayscale, 
-  #                           enforce_detection = enforce_detection, 
-  #                           align = align)
-
-	#--------------------------
-
   if img.shape[0] == 0 or img.shape[1] == 0:
     if enforce_detection == True:
       raise ValueError("Detected face shape is ", img.shape,
@@ -67,11 +59,12 @@ def preprocess_img(img, target_size=(112, 112),
       img = base_img.copy()
 #---------------------------------------------------------------
 
-  #extract face from images
+  #extract face from images using OPENCV
+
   (h, w) = img.shape[:2]
   blob = cv2.dnn.blobFromImage(cv2.resize(img, (112, 112)), 1.0, (112, 112), (104.0, 177.0, 123.0))
-  protopath = "/content/Create-Face-Data-from-Images/model_data/deploy.prototxt"
-  weightpath = "/content/Create-Face-Data-from-Images/model_data/weights.caffemodel"
+  protopath = "deploy.prototxt"
+  weightpath = "weights.caffemodel"
   model = cv2.dnn.readNetFromCaffe(protopath, weightpath)
 
   model.setInput(blob)
