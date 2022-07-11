@@ -131,12 +131,12 @@ def load_face_dataset(inputPath, minConfidence=0.5,
   (names, counts) = np.unique(names, return_counts=True)
   names = names.tolist()
   
-  faces = [] 
-  labels = []
-  frames = []
-  base_imgs = []
+  faces = [] #store face images after processing
+  labels = [] #store labels
+  frames = [] #show face image without processing
+  
   for imagepath in imagePaths:
-    image, frame, base_img = preprocess_img(imagepath, target_size=(112,112))
+    image, frame = preprocess_img(imagepath, target_size=(112,112))
     name = imagepath.split(os.path.sep)[-2]
     # print(name)
     if counts[names.index(name)] < minSamples:
@@ -144,9 +144,8 @@ def load_face_dataset(inputPath, minConfidence=0.5,
     faces.append(image)
     labels.append(name)
     frames.append(frame)
-    base_imgs.append(base_img)
 
   faces = np.array(faces)
   labels= np.array(labels)
 
-  return faces, labels, frames, base_imgs
+  return faces, labels, frames
