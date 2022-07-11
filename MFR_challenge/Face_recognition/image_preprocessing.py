@@ -65,7 +65,38 @@ def preprocess_img(img, target_size=(112, 112),
                     ". Consider to set enforce_detection argument to False.")
     else: #restore base image
       img = base_img.copy()
+#---------------------------------------------------------------
 
+  #extract face from images
+  (h, w) = img.shape[:2]
+  blob = cv2.dnn.blobFromImage(cv2.resize(img, (112, 112)), 1.0, (112, 112), (104.0, 177.0, 123.0))
+  protopath = "/content/Create-Face-Data-from-Images/model_data/deploy.prototxt"
+  weightpath = "/content/Create-Face-Data-from-Images/model_data/weights.caffemodel"
+  model = cv2.dnn.readNetFromCaffe(protopath, weightpath)
+
+  model.setInput(blob)
+  detections = model.forward()
+  
+  for i in range(0, detections.shape[2]):
+    box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
+    (startX, startY, endX, endY) = box.astype("int")
+
+    confidence = detections[0, 0, i, 2]
+
+    # If confidence > 0.5, show box around face
+    if (confidence > 0.5):
+      cv2.rectangle(img, (startX, startY), (endX, endY), (255, 255, 255), 2)
+
+  for i in range(0, detections.shape[2]):
+    box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
+    (startX, startY, endX, endY) = box.astype("int")
+
+    confidence = detections[0, 0, i, 2]
+
+    # If confidence > 0.5, save it as a separate file
+    if (confidence > 0.5):
+      img = img[startY:endY, startX:endX]
+  frame = img.copy()
 	#--------------------------
 
 	#post-processing
@@ -102,10 +133,9 @@ def preprocess_img(img, target_size=(112, 112),
     img = cv2.resize(img, target_size)
 
 	#---------------------------------------------------
-
 	#normalizing the image pixels
 
-  img_pixels = image.img_to_array(img) #what this line doing? must?
+  img_pixels = img_process.img_to_array(img) #what this line doing? must?
   img_pixels = np.expand_dims(img_pixels, axis = 0)
   img_pixels /= 255 #normalize input in [0, 1]
 
@@ -114,7 +144,7 @@ def preprocess_img(img, target_size=(112, 112),
 	# if return_region == True:
 	# 	return img_pixels, region
 	# else:
-  return img_pixels
+  return img_pixels, frame, base_img
 
 
 #############################################################################
