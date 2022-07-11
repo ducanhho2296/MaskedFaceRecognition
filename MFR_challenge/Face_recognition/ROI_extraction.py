@@ -95,6 +95,14 @@ def extract_ROI(img_path, shape_predictor_68_face_landmarks_path):
         roi_tuple.append(roi)
         clone_tuple.append(img_clone)
 
+    ################################################################################
+    #extract eye, eyebrow area histogram in LBP format
+
+    hist0, img_lbp0 = calculate_LBP(roi_tuple[0])
+    hist1, img_lbp1 = calculate_LBP(roi_tuple[1])
+    hist2, img_lbp2 = calculate_LBP(roi_tuple[2])
+    hist3, img_lbp3 = calculate_LBP(roi_tuple[3])
+
     
     
 
