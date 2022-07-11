@@ -116,3 +116,37 @@ def preprocess_img(img, target_size=(112, 112),
 	# else:
   return img_pixels
 
+#############################################################################
+#-------loop over all images and store images in a tuple, store labels of images into a tuple
+
+def load_face_dataset(inputPath, minConfidence=0.5,
+	minSamples=1):
+	# grab the paths to all images in our input directory, extract
+	# the name of the person (i.e., class label) from the directory
+	# structure, and count the number of example images we have per
+	# face
+  imagePaths = list(paths.list_images(inputPath))
+  # print(imagePaths)
+  names = [p.split(os.path.sep)[-2] for p in imagePaths]
+  (names, counts) = np.unique(names, return_counts=True)
+  names = names.tolist()
+  
+  faces = [] 
+  labels = []
+  frames = []
+  base_imgs = []
+  for imagepath in imagePaths:
+    image, frame, base_img = preprocess_img(imagepath, target_size=(112,112))
+    name = imagepath.split(os.path.sep)[-2]
+    # print(name)
+    if counts[names.index(name)] < minSamples:
+      continue
+    faces.append(image)
+    labels.append(name)
+    frames.append(frame)
+    base_imgs.append(base_img)
+
+  faces = np.array(faces)
+  labels= np.array(labels)
+
+  return faces, labels, frames, base_imgs
