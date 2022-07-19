@@ -132,6 +132,7 @@ def calculate_LBP(img_path):
         centre = image[x][y] 
         powers = [1, 2, 4, 8, 16, 32, 64, 128] 
         decimal_val = 0
+        
         #starting from top right,assigning bit to pixels clockwise 
         eight_bit_binary.append(assign_bit(image, x-1, y + 1,centre)) 
         eight_bit_binary.append(assign_bit(image, x, y + 1, centre)) 
