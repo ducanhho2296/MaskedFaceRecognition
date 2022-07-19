@@ -118,7 +118,7 @@ def extract_ROI(img_path, shape_predictor_68_face_landmarks_path):
 #------- encode ROI of faces in LBP and plot histogram-------------
 def calculate_LBP(img_path):    
     img = cv2.imread(img_path)
-    def assign_bit(image, x, y, c):   #comparing bit with threshold value of centre pixel
+    def assign_bit(image, x, y, c):  #comparing bit with threshold value of centre pixel
         bit = 0  
         try:          
             if image[x][y] >= c: 
