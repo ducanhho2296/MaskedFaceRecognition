@@ -36,6 +36,7 @@ After that, using Cosine distance function to calculate distance between histogr
 ## Testing Arcface model with COMASK20 Dataset of the paper
 COMASK20 dataset contains real mask and also fake mask. I created a small subdataset of unmasked and real masked faces to testing the model.
 The model Arcface without using LBP method achieved Accuracy of 93% with a the testset, which contains only the face with real mask.
+
 - Some examples of Masked Face Recognition and Verification results:
 
 ![Capture](https://user-images.githubusercontent.com/92146886/178292234-8518d9c9-2282-4d67-adf7-1b8a076f2ec3.PNG)
