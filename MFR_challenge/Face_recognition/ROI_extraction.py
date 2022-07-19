@@ -127,7 +127,7 @@ def calculate_LBP(img_path):
             pass
         return bit 
         
-    def local_bin_val(image, x, y):  #calculating local binary pattern value of a pixel
+    def local_bin_val(image, x, y):     #calculating local binary pattern value of a pixel
         eight_bit_binary = []
         centre = image[x][y] 
         powers = [1, 2, 4, 8, 16, 32, 64, 128] 
