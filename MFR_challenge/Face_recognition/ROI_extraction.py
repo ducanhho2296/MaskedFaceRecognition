@@ -127,7 +127,7 @@ def calculate_LBP(img_path):
             pass
         return bit 
         
-    def local_bin_val(image, x, y):     #calculating local binary pattern value of a pixel
+    def local_bin_val(image, x, y):    #calculating local binary pattern value of a pixel
         eight_bit_binary = []
         centre = image[x][y] 
         powers = [1, 2, 4, 8, 16, 32, 64, 128] 
@@ -150,7 +150,7 @@ def calculate_LBP(img_path):
     m, n, _ = img.shape 
     gray_scale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  #converting image to grayscale
     lbp_img = np.zeros((m, n),np.uint8) 
-    
+
     # converting image to lbp
     for i in range(0,m): 
         for j in range(0,n): 
