@@ -64,7 +64,7 @@ def findCosineDistance(source_representation, test_representation):
     # if dist >= 0 and dist < 0.35: print("Same person")
     # elif dist >= 0.35 and dist < 0.7: print("Must use LBP to verify this pair")
     # else: print("not the same person")
-    # return dist
+    return dist
 
 #Create and load Arcface model for prediction
 def loadModel(model_path):
