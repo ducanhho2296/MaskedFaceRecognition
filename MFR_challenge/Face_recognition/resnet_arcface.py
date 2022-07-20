@@ -61,7 +61,7 @@ def findCosineDistance(source_representation, test_representation):
     dist = 1 - (a / (np.sqrt(b) * np.sqrt(c)))
     print("cosine similarity: ", dist)
     #similarity threshold
-    # if dist >= 0 and dist < 0.35: print("Same person")
+    if dist >= 0 and dist < 0.35: print("Same person")
     elif dist >= 0.35 and dist < 0.7: print("Must use LBP to verify this pair")
     else: print("not the same person")
     return dist
