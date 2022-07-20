@@ -79,4 +79,5 @@ def loadModel(model_path):
 	model = keras.models.Model(inputs, embedding, name=base_model.name)
 
 	model.load_weights(model_path)
+	
 	return model
