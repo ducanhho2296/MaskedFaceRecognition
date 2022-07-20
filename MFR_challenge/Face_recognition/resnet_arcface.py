@@ -33,7 +33,7 @@ def block1(x, filters, kernel_size=3, stride=1, conv_shortcut=True, name=None):
 	x = layers.ZeroPadding2D(padding=1, name=name + '_1_pad')(x)
 	x = layers.Conv2D(filters, 3, strides=1, kernel_initializer='glorot_normal', use_bias=False, name=name + '_1_conv')(x)
 	x = layers.BatchNormalization(axis=bn_axis, epsilon=2e-5, momentum=0.9, name=name + '_2_bn')(x)
-	
+
 	x = layers.PReLU(shared_axes=[1, 2], name=name + '_1_prelu')(x)
 	x = layers.ZeroPadding2D(padding=1, name=name + '_2_pad')(x)
 	x = layers.Conv2D(filters, kernel_size, strides=stride, kernel_initializer='glorot_normal', use_bias=False, name=name + '_2_conv')(x)
@@ -61,10 +61,10 @@ def findCosineDistance(source_representation, test_representation):
     dist = 1 - (a / (np.sqrt(b) * np.sqrt(c)))
     print("cosine similarity: ", dist)
     #similarity threshold
-    if dist >= 0 and dist < 0.35: print("Same person")
-    elif dist >= 0.35 and dist < 0.7: print("Must use LBP to verify this pair")
-    else: print("not the same person")
-    return dist
+    # if dist >= 0 and dist < 0.35: print("Same person")
+    # elif dist >= 0.35 and dist < 0.7: print("Must use LBP to verify this pair")
+    # else: print("not the same person")
+    # return dist
 
 #Create and load Arcface model for prediction
 def loadModel(model_path):
