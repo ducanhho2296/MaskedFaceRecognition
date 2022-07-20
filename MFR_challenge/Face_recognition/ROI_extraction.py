@@ -150,6 +150,7 @@ def calculate_LBP(img_path):
     m, n, _ = img.shape 
     gray_scale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  #converting image to grayscale
     lbp_img = np.zeros((m, n),np.uint8) 
+    
     # converting image to lbp
     for i in range(0,m): 
         for j in range(0,n): 
