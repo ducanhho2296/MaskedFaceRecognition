@@ -63,8 +63,8 @@ def preprocess_img(img, target_size=(112, 112),
 
   (h, w) = img.shape[:2]
   blob = cv2.dnn.blobFromImage(cv2.resize(img, (112, 112)), 1.0, (112, 112), (104.0, 177.0, 123.0))
-  protopath = "/Create-Face-Data-from-Images/model_data/deploy.prototxt"
-  weightpath = "/Create-Face-Data-from-Images/model_dataweights.caffemodel"
+  protopath = "./Create-Face-Data-from-Images/model_data/deploy.prototxt"
+  weightpath = "./Create-Face-Data-from-Images/model_dataweights.caffemodel"
   model = cv2.dnn.readNetFromCaffe(protopath, weightpath)
 
   model.setInput(blob)
