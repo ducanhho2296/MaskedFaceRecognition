@@ -158,7 +158,7 @@ def load_face_dataset(inputPath, minConfidence=0.5,
   faces = [] #store face images after processing
   labels = [] #store labels
   frames = [] #show face image without processing
-
+  base_imgs
   for imagepath in imagePaths:
     image, frame = preprocess_img(imagepath, target_size=(112,112))
     name = imagepath.split(os.path.sep)[-2]
