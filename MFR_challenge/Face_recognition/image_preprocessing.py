@@ -137,7 +137,7 @@ def preprocess_img(img, target_size=(112, 112),
 	# if return_region == True:
 	# 	return img_pixels, region
 	# else:
-  return img_pixels, frame
+  return img_pixels, frame, base_img
 
 
 #############################################################################
