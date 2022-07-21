@@ -172,4 +172,4 @@ def load_face_dataset(inputPath, minConfidence=0.5,
   faces = np.array(faces)
   labels= np.array(labels)
 
-  return faces, labels, frames
+  return faces, labels, frames, base_imgs
