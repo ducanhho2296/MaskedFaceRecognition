@@ -59,7 +59,7 @@ def preprocess_img(img, target_size=(112, 112),
       img = base_img.copy()
 #---------------------------------------------------------------
 
-  #extract face from images using OPENCV
+  #extract face from images using OPENCV 
 
   (h, w) = img.shape[:2]
   blob = cv2.dnn.blobFromImage(cv2.resize(img, (112, 112)), 1.0, (112, 112), (104.0, 177.0, 123.0))
