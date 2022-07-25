@@ -84,3 +84,5 @@ for i in range(len(embeddings)):
       flag = findCosineDistance(embeddings[i], embeddings[j])
       if flag != 0.5:
         flags.append(flag)
+
+      elif flag == 0.5:
