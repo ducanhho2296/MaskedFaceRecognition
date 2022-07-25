@@ -56,3 +56,13 @@ for i in range (0, len(LBP_faces)-1, 2):
 # LBP_labels.append(labels[i])  #store labels of this pair for comparison label_flag
 # LBP_labels.append(labels[j])
 
+#if cos = 1 and label1 == label2 => True Positive
+#if cos = 0 and label1 != label2 => True negative
+#if cos = 0.5, put these faces into a tuple, after that run KNN to choose min distance.
+
+label_flags = []  #tuple of ground true, y_test
+label_flag = 0    #ground true, 2 faces have the same label => label_flag = 1 
+flags = []    #tuple of y_pred (after finding Cosine similarity)
+LBP_flags = []      #tuple of faces, which will be classify by using LBP
+LBP_labels =[] #store labels to use in LBP task
+
