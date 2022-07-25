@@ -77,3 +77,10 @@ flags = []    #tuple of y_pred (after finding Cosine similarity)
 LBP_flags = []      #tuple of faces, which will be classify by using LBP
 LBP_labels =[] #store labels to use in LBP task
 
+for i in range(len(embeddings)):
+  hist_distances = []
+  for j in range(len(embeddings) - 1, 0, -1):
+    if i != j:
+      flag = findCosineDistance(embeddings[i], embeddings[j])
+      if flag != 0.5:
+        flags.append(flag)
