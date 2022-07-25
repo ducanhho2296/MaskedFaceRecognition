@@ -21,3 +21,15 @@ sys.path.append(_path)
 #---download model from gg drive
 # import gdown
 # !gdown 1LVB3CdVejpmGHM28BpqqkbZP5hDEcdZY
+
+#load model
+from resnet_arcface import loadModel
+
+model_path = os.path.join(_path, 'model', 'arcface_weights.h5')
+model = loadModel(model_path)
+#model.summary()
+#load dataset
+# manual move some subfolder(each subfolder contains diffent persons) from COMASK20 dataset into testsets 
+testsets_path = os.path.join(_path, 'testsets')
+faces, labels, frames, base_imgs = load_face_dataset(testsets_path)
+
