@@ -33,3 +33,19 @@ model = loadModel(model_path)
 testsets_path = os.path.join(_path, 'testsets')
 faces, labels, frames, base_imgs = load_face_dataset(testsets_path)
 
+#extract facial Embeddings
+embeddings = []
+flags = []
+for i in faces:
+  embedding = model.predict(i)[0]
+  embeddings.append(embedding)
+
+#extract histogram of all faces (eye, eyebrow regions)
+hists = []
+for face in frames:
+  hist = extract_ROI(face)
+  hists.append(hist)
+
+#find min distance of each pair of face [i] to all faces and return 1 for prediction (append 1 into flags)
+for i in range (0, len(LBP_faces)-1, 2):
+  hist_distance = lbp_recognizer(frames[i], frames[j])
