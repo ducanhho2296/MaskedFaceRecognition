@@ -56,6 +56,17 @@ for i in range (0, len(LBP_faces)-1, 2):
 # LBP_labels.append(labels[i])  #store labels of this pair for comparison label_flag
 # LBP_labels.append(labels[j])
 
+for i in range(0, len(LBP_faces)-1, 2): #take each pair face[i] and face[i+1], face[i+2] and face[i+3]
+  # dist = 
+
+if len(hist_distances) != 0:
+  min_hist = min(hist_distances)
+  min_index = hist_distances.index(min_hist)
+  flags.append(1)
+  if labels[min_index] == labels[min_index +1]: label_flags.append(1) #one hist have 2 faces, hist0 = dist(faces[0], faces[1])
+  else: label_flags.append(0)
+
+#store all cos_distance into a tuple 
 #if cos = 1 and label1 == label2 => True Positive
 #if cos = 0 and label1 != label2 => True negative
 #if cos = 0.5, put these faces into a tuple, after that run KNN to choose min distance.
