@@ -118,3 +118,4 @@ y_test = len(flags)
 acc = y_pred/y_test *100
 print("accuracy without LBP is: ", acc)
 print("F1 score without LBPis: ", f1_score(label_flags, flags))
+print("\n")
