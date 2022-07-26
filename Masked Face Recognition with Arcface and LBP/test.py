@@ -112,3 +112,4 @@ for i in range(len(embeddings)):
     if labels[min_index] == labels[min_index +1]: LBP_labels.append(1) #one hist have 2 faces, hist0 = dist(faces[0], faces[1])
     else: LBP_labels.append(0)
 
+#-------Accuracy and ROC curve-----------#
