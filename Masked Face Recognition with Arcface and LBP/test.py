@@ -94,3 +94,11 @@ for i in range(len(embeddings)):
       #store labels for testing prediction  
       if labels[i] == labels[j] and flag != 0.5: 
         label_flag = 1
+        label_flags.append(label_flag)
+      elif labels[i] != labels[j] and flag != 0.5:
+        label_flag = 0
+        label_flags.append(label_flag)
+      # else: print("this face must be verified by LBP")
+      # label_flags.append(label_flag)
+      # label_flag = 0
+
