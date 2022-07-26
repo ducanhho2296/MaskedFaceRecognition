@@ -116,3 +116,4 @@ for i in range(len(embeddings)):
 y_pred = len([i for i, j in zip(flags, label_flags) if i == j])
 y_test = len(flags)
 acc = y_pred/y_test *100
+print("accuracy without LBP is: ", acc)
