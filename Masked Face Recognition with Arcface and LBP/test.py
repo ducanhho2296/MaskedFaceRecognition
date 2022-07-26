@@ -92,3 +92,4 @@ for i in range(len(embeddings)):
         hist_distances.append(dist)
 
       #store labels for testing prediction  
+      if labels[i] == labels[j] and flag != 0.5: 
