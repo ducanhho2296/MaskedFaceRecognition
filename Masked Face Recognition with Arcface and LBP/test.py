@@ -102,3 +102,6 @@ for i in range(len(embeddings)):
       # label_flags.append(label_flag)
       # label_flag = 0
 
+    else: continue  
+
+#LBP prediction part
