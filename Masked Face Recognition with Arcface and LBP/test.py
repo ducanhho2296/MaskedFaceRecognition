@@ -86,3 +86,8 @@ for i in range(len(embeddings)):
         flags.append(flag)
 
       elif flag == 0.5:
+        if len(hists[i]) == len(hists[j]):
+          dist = 1 - np.dot(hist[i], hist[j])
+        else: dist = 10
+        hist_distances.append(dist)
+
