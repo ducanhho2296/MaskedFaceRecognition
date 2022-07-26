@@ -113,3 +113,4 @@ for i in range(len(embeddings)):
     else: LBP_labels.append(0)
 
 #-------Accuracy and ROC curve-----------#
+y_pred = len([i for i, j in zip(flags, label_flags) if i == j])
