@@ -91,3 +91,4 @@ for i in range(len(embeddings)):
         else: dist = 10
         hist_distances.append(dist)
 
+      #store labels for testing prediction  
