@@ -114,3 +114,4 @@ for i in range(len(embeddings)):
 
 #-------Accuracy and ROC curve-----------#
 y_pred = len([i for i, j in zip(flags, label_flags) if i == j])
+y_test = len(flags)
