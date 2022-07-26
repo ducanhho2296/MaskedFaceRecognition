@@ -105,3 +105,10 @@ for i in range(len(embeddings)):
     else: continue  
 
 #LBP prediction part
+  if len(hist_distances) != 0:
+    min_hist = min(hist_distances)
+    min_index = hist_distances.index(min_hist)
+    LBP_flags.append(1)
+    if labels[min_index] == labels[min_index +1]: LBP_labels.append(1) #one hist have 2 faces, hist0 = dist(faces[0], faces[1])
+    else: LBP_labels.append(0)
+
