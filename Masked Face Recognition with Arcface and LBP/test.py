@@ -93,3 +93,4 @@ for i in range(len(embeddings)):
 
       #store labels for testing prediction  
       if labels[i] == labels[j] and flag != 0.5: 
+        label_flag = 1
