@@ -131,3 +131,9 @@ plt.xlabel('False Positive Rate')
 plt.legend(loc=4)
 plt.show()
 
+input("________Press Enter to continue..._________")
+
+#-----Accuracy with LBP method----------#
+total_flags = flags + LBP_flags
+total_labels = label_flags + LBP_labels
+
