@@ -142,3 +142,4 @@ y_test_lbp = len(total_flags)
 acc = y_pred_lbp / y_test_lbp * 100
 print("accuracy with LBP is: ", acc)
 print("F1 score with LBP is: ", f1_score(total_labels, total_flags))
+print("\n")
