@@ -140,3 +140,4 @@ total_labels = label_flags + LBP_labels
 y_pred_lbp = len([i for i, j in zip(total_flags, total_labels) if i == j])
 y_test_lbp = len(total_flags)
 acc = y_pred_lbp / y_test_lbp * 100
+print("accuracy with LBP is: ", acc)
