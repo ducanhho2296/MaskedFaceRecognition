@@ -121,3 +121,4 @@ print("F1 score without LBPis: ", f1_score(label_flags, flags))
 print("\n")
 
 fpr, tpr, _ = metrics.roc_curve(label_flags, flags)
+auc = metrics.roc_auc_score(label_flags, flags)
