@@ -59,7 +59,7 @@ class PyWebFace260M:
         max_time_cost = 1000
 
 
-        self.model_file = os.path.join(rdir, 'face_reg', "R18.onnx")
+        self.model_file = os.path.join(rdir, 'face_reg', "resnet34.onnx")
         print('use onnx-model:', self.model_file)
 
         
