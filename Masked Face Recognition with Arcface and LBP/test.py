@@ -145,3 +145,4 @@ print("F1 score with LBP is: ", f1_score(total_labels, total_flags))
 print("\n")
 fpr, tpr, _ = metrics.roc_curve(total_labels, total_flags)
 auc = metrics.roc_auc_score(total_labels, total_flags)
+
