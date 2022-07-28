@@ -149,3 +149,4 @@ auc = metrics.roc_auc_score(total_labels, total_flags)
 #create ROC curve
 plt.plot(fpr,tpr,label="AUC="+str(auc))
 plt.title("ROC CURVE with LBP")
+plt.ylabel('True Positive Rate')
