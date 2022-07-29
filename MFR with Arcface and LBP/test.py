@@ -24,3 +24,4 @@ flags = []
 for i in faces:
   embedding = model.predict(i)[0]
   embeddings.append(embedding)
+
