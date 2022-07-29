@@ -22,3 +22,4 @@ model = loadModel(model_path)
 embeddings = []
 flags = []
 for i in faces:
+  embedding = model.predict(i)[0]
