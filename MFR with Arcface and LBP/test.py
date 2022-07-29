@@ -18,3 +18,4 @@ from tensorflow.keras.preprocessing import image as img_process
 model_path = "/content/arcface_weights.h5"
 model = loadModel(model_path)
 
+#Extract facial Embeddings
