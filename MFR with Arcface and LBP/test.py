@@ -20,3 +20,4 @@ model = loadModel(model_path)
 
 #Extract facial Embeddings
 embeddings = []
+flags = []
