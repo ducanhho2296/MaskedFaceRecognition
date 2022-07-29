@@ -25,3 +25,10 @@ for i in faces:
   embedding = model.predict(i)[0]
   embeddings.append(embedding)
 
+#extract histogram of all faces (eye, eyebrow regions)
+#--this part will take long time, consider to use LBP-----
+
+# hists = []
+# for face in frames:
+#   hist = extract_ROI(face)
+#   hists.append(hist)
