@@ -9,6 +9,7 @@ data_path = "/content/drive/MyDrive/Colab Notebooks/comask20_testset"
 
 correct_predictions = 0
 time_per_prediction = 0
+start_total = time.time()
 for dirname in os.listdir(data_path):
     genuine = [file for file in glob.glob(data_path + dirname + "/*")[0:6]]
     random.shuffle(genuine)
