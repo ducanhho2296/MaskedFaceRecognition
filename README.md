@@ -35,14 +35,27 @@ After that, using Cosine distance function to calculate distance between histogr
 
 ## Testing Arcface model with COMASK20 Dataset of the paper
 COMASK20 dataset contains real mask and also fake mask. I created a small subdataset of unmasked and real masked faces to testing the model.
-The model Arcface without using LBP method achieved Accuracy of 93% with a the testset, which contains only the face with real mask.
-
-The Accuracy was boosted to 97% with the testset when LBP method is used. 
 - Some examples of Masked Face Recognition and Verification results:
 
 ![Capture](https://user-images.githubusercontent.com/92146886/178292234-8518d9c9-2282-4d67-adf7-1b8a076f2ec3.PNG)
 
 ### Accuracy of model with- and without using LBP as double assurance method
+| Tables                   | Accuracy      | F1-Score|
+| -------------            |:-------------:|---------|
+| Arcface without LBP      | 96.4%         |0.68     |
+| Arcface with LBP         | 99.76%        |0.73     |
+
+### ROC Curve
+|![image](https://user-images.githubusercontent.com/92146886/181904432-21745149-e840-4ebe-88a1-73634834f477.png)|![image](https://user-images.githubusercontent.com/92146886/181904437-e5b8071f-bce9-4662-87ec-afa8df9fc098.png)|
+
+
+
+#### Advantage of LBP:
+- increase the true cases 
+- boost accuracy of the recognition task
+#### Disadvantage of LBP
+- LBP costs much time to compute histogram with bigger testset. 
+
 
 ### References:
 - Paper: https://rdcu.be/cQqTn.
