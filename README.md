@@ -51,7 +51,7 @@ COMASK20 dataset contains real mask and also fake mask. I created a small subdat
 
 
 #### Advantage of LBP:
-- increase the true cases 
+- increase number of true cases 
 - boost accuracy of the recognition task
 #### Disadvantage of LBP
 - LBP costs much time to compute histogram of faces when using bigger testset. (10 minutes to calculate histogramm of all faces in a testsets with 200 faces)
