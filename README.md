@@ -42,6 +42,7 @@ The Accuracy was boosted to 97% with the testset when LBP method is used.
 
 ![Capture](https://user-images.githubusercontent.com/92146886/178292234-8518d9c9-2282-4d67-adf7-1b8a076f2ec3.PNG)
 
+### Accuracy of model with- and without using LBP as double assurance method
 
 ### References:
 - Paper: https://rdcu.be/cQqTn.
