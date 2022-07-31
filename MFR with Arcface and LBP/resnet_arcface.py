@@ -67,7 +67,6 @@ def findCosineDistance(source_representation, test_representation):
     return dist
 
 #Create and load Arcface model for prediction
-
 def loadModel(model_path):
 	base_model = ResNet34()
 	inputs = base_model.inputs[0]
