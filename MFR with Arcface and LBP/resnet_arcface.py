@@ -66,7 +66,6 @@ def findCosineDistance(source_representation, test_representation):
     else: print("not the same person")
     return dist
 
-#Create and load Arcface model for prediction
 def loadModel(model_path):
 	base_model = ResNet34()
 	inputs = base_model.inputs[0]
