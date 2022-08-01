@@ -5,7 +5,7 @@ import time
 
 random.seed(2468)
 
-data_path = "/MyDrive/Colab Notebooks/comask20_testset"
+data_path = "/comask20_testset"
 
 correct_predictions = 0
 time_per_prediction = 0
