@@ -37,6 +37,7 @@ for dirname in os.listdir(data_path):
     else:
         bad_predictions.append(sets[0])
 
+
 print("Bad predictions: ", bad_predictions)
 
 print("Accuracy: ", correct_predictions / (len(os.listdir(data_path)) * 2))
