@@ -25,7 +25,6 @@ for dirname in os.listdir(data_path):
         # TODO add prediction here
         time_per_prediction += time.time() - start_pred
 
-
     # TODO determine index of imposter and add to imposter list
 
     if imposter[0] == 0:
