@@ -49,9 +49,9 @@ def search_landmark(image_path):
             landmark_tuple.append((x1, y1))
             cv2.circle(img, (x1, y1), 2, (255, 255, 0), -1)
             x1 = y1 = 0
-    plt.figure(figsize=(10,10))
-    plt.imshow(img)
-    return landmark_tuple
+    # plt.figure(figsize=(10,10))
+    # plt.imshow(img)
+    # return landmark_tuple
 
 #------EXTRACT SELF-ROI OF FACES BY USING DLIB-68LANDMARKS-----#
 from collections import OrderedDict
