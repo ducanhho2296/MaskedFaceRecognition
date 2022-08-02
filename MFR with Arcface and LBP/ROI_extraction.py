@@ -39,7 +39,7 @@ def search_landmark(image_path):
     from itertools import chain
     merge_range = chain(range(1,30), range(36, 48)) #take only eyes- and eyebrows area
     # x=y=d=0
-    landmark_tuple = []
+    # landmark_tuple = []
     # for k, d in enumerate(face):
     #     print("d: ", d)
     #     landmarks = landmark_detect(img, d)
