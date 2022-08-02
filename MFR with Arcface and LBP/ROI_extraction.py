@@ -33,7 +33,7 @@ def show_img(img_path1, img_path2):
 def search_landmark(image_path):
     img = plt.imread(image_path)
     face_detect = dlib.get_frontal_face_detector()
-    landmark_detect = dlib.shape_predictor("facial-landmarks-recognition/shape_predictor_68_face_landmarks.dat")
+    # landmark_detect = dlib.shape_predictor("facial-landmarks-recognition/shape_predictor_68_face_landmarks.dat")
     # face = face_detect(img, 1)
 
     # from itertools import chain
