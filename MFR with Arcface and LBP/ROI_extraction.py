@@ -44,7 +44,7 @@ def search_landmark(image_path):
         print("d: ", d)
         landmarks = landmark_detect(img, d)
         for n in merge_range:
-            x1 = landmarks.part(n).x
+            # x1 = landmarks.part(n).x
             # y1 = landmarks.part(n).y
             # landmark_tuple.append((x1, y1))
             # cv2.circle(img, (x1, y1), 2, (255, 255, 0), -1)
