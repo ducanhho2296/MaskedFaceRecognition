@@ -5,6 +5,7 @@ import time
 
 random.seed(2468)
 
+<<<<<<< HEAD
 data_path = "../comask20_testset/"
 
 correct_predictions = 0
