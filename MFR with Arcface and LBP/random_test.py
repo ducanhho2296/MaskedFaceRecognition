@@ -7,6 +7,8 @@ random.seed(2468)
 
 <<<<<<< HEAD
 data_path = "../comask20_testset/"
+data_path = "/MyDrive/Colab Notebooks/comask20_testset"
+>>>>>>> parent of d057dff (Update random_test.py)
 
 correct_predictions = 0
 time_per_prediction = 0
