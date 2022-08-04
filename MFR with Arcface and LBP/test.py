@@ -7,7 +7,7 @@ import cv2
 from sklearn import metrics
 from sklearn.metrics import f1_score
 import matplotlib.pyplot as plt
-from
+from ROI_extraction import 
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 parser = argparse.ArgumentParser(description="Run Arcface model validation.")
