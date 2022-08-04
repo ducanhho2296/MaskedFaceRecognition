@@ -52,7 +52,7 @@ for face in frames:
 #store all cos_distance into a tuple 
 #if cos = 1 and label1 == label2 => True Positive
 #if cos = 0 and label1 != label2 => True negative
-#if cos = 0.5, put these faces into a tuple, after that run KNN to choose min distance.
+#if cos = 0.5, put these faces into a tuple, after that run LBP to choose min distance.
 
 label_flags = []  #tuple of ground true, y_test
 label_flag = 0    #ground true, 2 faces have the same label => label_flag = 1 
