@@ -48,6 +48,7 @@ hists = []
 for face in frames:
   hist = extract_ROI(face)
   hists.append(hist)
+  
 #store all cos_distance into a tuple 
 #if cos = 1 and label1 == label2 => True Positive
 #if cos = 0 and label1 != label2 => True negative
