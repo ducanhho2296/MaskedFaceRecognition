@@ -27,7 +27,7 @@ from resnet_arcface import loadModel
 
 model_path = os.path.join(_path, 'model', 'arcface_weights.h5')
 model = loadModel(model_path)
-#model.summary()
+
 #load dataset
 # manual move some subfolder(each subfolder contains diffent persons) from COMASK20 dataset into testsets 
 testsets_path = os.path.join(_path, 'testsets')
