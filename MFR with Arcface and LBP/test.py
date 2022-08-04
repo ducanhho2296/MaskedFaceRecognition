@@ -54,10 +54,7 @@ for i in range (0, len(LBP_faces)-1, 2):
   hist_distance = lbp_recognizer(frames[i], frames[j])
 
   hist_distances.append(hist_distance)
-# LBP_faces.append(frames[i])   #store this pair of faces to locate them after find min hist_distance
-# LBP_faces.append(frames[j])
-# LBP_labels.append(labels[i])  #store labels of this pair for comparison label_flag
-# LBP_labels.append(labels[j])
+
 
 for i in range(0, len(LBP_faces)-1, 2): #take each pair face[i] and face[i+1], face[i+2] and face[i+3]
   # dist = 
