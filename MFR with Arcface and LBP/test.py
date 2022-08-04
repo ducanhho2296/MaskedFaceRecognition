@@ -8,6 +8,8 @@ from sklearn import metrics
 from sklearn.metrics import f1_score
 import matplotlib.pyplot as plt
 from ROI_extraction import extract_ROI
+from resnet_arcface import findCosineDistance
+
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 parser = argparse.ArgumentParser(description="Run Arcface model validation.")
