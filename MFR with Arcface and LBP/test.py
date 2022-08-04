@@ -50,7 +50,6 @@ for face in frames:
   hists.append(hist)
 
 
-
 for i in range(0, len(LBP_faces)-1, 2): #take each pair face[i] and face[i+1], face[i+2] and face[i+3]
   # dist = 
 
