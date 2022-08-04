@@ -51,7 +51,7 @@ def show_img(img_path1, img_path2):
             # x1 = y1 = 0
     # plt.figure(figsize=(10,10))
     # plt.imshow(img)
-    # return landmark_tuple
+    # return landmark_tuple 
 
 #------EXTRACT SELF-ROI OF FACES BY USING DLIB-68LANDMARKS-----#
 from collections import OrderedDict
