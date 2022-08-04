@@ -49,11 +49,7 @@ for face in frames:
   hist = extract_ROI(face)
   hists.append(hist)
 
-#find min distance of each pair of face [i] to all faces and return 1 for prediction (append 1 into flags)
-for i in range (0, len(LBP_faces)-1, 2):
-  hist_distance = lbp_recognizer(frames[i], frames[j])
 
-  hist_distances.append(hist_distance)
 
 
 for i in range(0, len(LBP_faces)-1, 2): #take each pair face[i] and face[i+1], face[i+2] and face[i+3]
