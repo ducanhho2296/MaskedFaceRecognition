@@ -58,7 +58,7 @@ label_flags = []  #tuple of ground true, y_test
 label_flag = 0    #ground true, 2 faces have the same label => label_flag = 1 
 flags = []        #tuple of y_pred (after finding Cosine similarity)
 LBP_flags = []    #tuple of faces, which will be classify by using LBP
-LBP_labels =[] #store labels to use in LBP task
+LBP_labels =[]    #store labels to use in LBP task
 
 for i in range(len(embeddings)):
   hist_distances = []
