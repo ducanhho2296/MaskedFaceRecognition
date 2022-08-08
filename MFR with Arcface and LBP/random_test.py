@@ -21,7 +21,7 @@ for dirname in os.listdir(data_path):
 
     imposter = []
     faces = []
-  embeddings = []
+    embeddings = []
   acc_per_set = []
     for set in sets:
         start_pred = time.time()
