@@ -27,18 +27,18 @@ for dirname in os.listdir(data_path):
         faces = []
 
         for face in set:
-      face, frame, base_img = preprocess_img(face, target_size=(112,112))
-      faces.append(face)
-    # for face in faces:
-    #   embedding = model.predict(face)[0]
-    #   embeddings.append(embedding)
-    start_pred = time.time()
-    # TODO add prediction here
-    time_per_prediction += time.time() - start_pred
-    for face in faces:
-      embedding = model.predict(face)[0]
-      embeddings.append(embedding)
-    # face, frame, base_img = preprocess_img(set, target_size=(112,112))
+            face, frame, base_img = preprocess_img(face, target_size=(112,112))
+            faces.append(face)
+        # for face in faces:
+        #   embedding = model.predict(face)[0]
+        #   embeddings.append(embedding)
+        start_pred = time.time()
+        # TODO add prediction here
+        time_per_prediction += time.time() - start_pred
+        for face in faces:
+            embedding = model.predict(face)[0]
+            embeddings.append(embedding)
+        # face, frame, base_img = preprocess_img(set, target_size=(112,112))
 
     # TODO determine index of imposter and add to imposter list
 
