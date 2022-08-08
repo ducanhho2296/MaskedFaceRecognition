@@ -51,7 +51,7 @@ print("Bad predictions: ", bad_predictions)
 
 print("Accuracy: ", correct_predictions / (len(os.listdir(data_path)) * 2))
 print("Total time: {}s\tPrediction time: {}s\tMean prediction time per set: {}s".format(time.time() - start_total, 
-                                                                                        time_per_prediction, time_per_prediction / (len(os.listdir(data_path)) * 2))
+                                                                                        time_per_prediction, time_per_prediction / (len(os.listdir(data_path)) * 2)))
 
 print("----------------------------------------")        
 print("total Accuracy of all Test Batches: ", np.mean(acc_per_sets))
