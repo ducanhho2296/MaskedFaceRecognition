@@ -29,7 +29,6 @@ for dirname in os.listdir(data_path):
             face, frame, base_img = preprocess_img(face, target_size=(112,112))
             faces.append(face)
         # for face in faces:
-        #   embedding = model.predict(face)[0]
         #   embeddings.append(embedding)
         start_pred = time.time()
         # TODO add prediction here
