@@ -34,7 +34,6 @@ for dirname in os.listdir(data_path):
         for face in faces:
             embedding = model.predict(face)[0]
             embeddings.append(embedding)
-        # face, frame, base_img = preprocess_img(set, target_size=(112,112))
 
     # TODO determine index of imposter and add to imposter list
 
