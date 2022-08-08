@@ -24,7 +24,7 @@ for dirname in os.listdir(data_path):
     embeddings = []
     acc_per_set = []
     for set in sets:
-            faces = []
+        faces = []
 
         start_pred = time.time()
         # TODO add prediction here
