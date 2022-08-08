@@ -28,7 +28,6 @@ for dirname in os.listdir(data_path):
         for face in set:
             face, frame, base_img = preprocess_img(face, target_size=(112,112))
             faces.append(face)
-        #   embeddings.append(embedding)
         start_pred = time.time()
         # TODO add prediction here
         time_per_prediction += time.time() - start_pred
