@@ -20,6 +20,9 @@ for dirname in os.listdir(data_path):
     sets = [[imposter[0]] + genuine[0:3], [imposter[1]] + genuine[3:]]
 
     imposter = []
+  faces = []
+  embeddings = []
+  acc_per_set = []
     for set in sets:
         start_pred = time.time()
         # TODO add prediction here
