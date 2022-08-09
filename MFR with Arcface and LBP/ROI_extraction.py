@@ -36,13 +36,7 @@ def show_img(img_path1, img_path2):
     # landmark_detect = dlib.shape_predictor("facial-landmarks-recognition/shape_predictor_68_face_landmarks.dat")
     # face = face_detect(img, 1)
 
-    # from itertools import chain
-    # merge_range = chain(range(1,30), range(36, 48)) #take only eyes- and eyebrows area
-    # x=y=d=0
-    # landmark_tuple = []
-    # for k, d in enumerate(face):
-    #     print("d: ", d)
-    #     landmarks = landmark_detect(img, d)
+
 
 
 #------EXTRACT SELF-ROI OF FACES BY USING DLIB-68LANDMARKS-----#
