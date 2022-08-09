@@ -29,9 +29,6 @@ def show_img(img_path1, img_path2):
     plt.axis('off')
     plt.title("Second")
 
-#extract ROI using dlib detector
-
-
 #------EXTRACT SELF-ROI OF FACES BY USING DLIB-68LANDMARKS-----#
 from collections import OrderedDict
 
