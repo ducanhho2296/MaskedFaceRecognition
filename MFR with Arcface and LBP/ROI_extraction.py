@@ -62,8 +62,8 @@ def extract_ROI(img_path, shape_predictor_68_face_landmarks_path):
     for (name, (i,j)) in FACIAL_LANDMARKS_IDXS.items():
         img_clone = img.copy()
 
-        for (x, y) in shape_ROI[i:j]:
-            cv2.circle(img_clone, (x, y), 1, (0, 0, 255), -1)
+        # for (x, y) in shape_ROI[i:j]:
+        #     cv2.circle(img_clone, (x, y), 1, (0, 0, 255), -1)
         
         (x, y, w, h) = cv2.boundingRect(np.array([shape_ROI[i:j]]))
         roi = img[y:y + h, x:x + w]
