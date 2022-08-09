@@ -16,7 +16,7 @@ def show_img(img_path1, img_path2):
     columns = 2
     fig.add_subplot(rows, columns, 1)
 
-    # showing image
+    # showing image 
     plt.imshow(img)
     plt.axis('off')
     plt.title("First")
