@@ -98,8 +98,6 @@ def preprocess_img(img, target_size=(112, 112),
 
 	#---------------------------------------------------
 	#resize image to expected shape
-
-
   if img.shape[0] > 0 and img.shape[1] > 0:
     factor_0 = target_size[0] / img.shape[0]
     factor_1 = target_size[1] / img.shape[1]
