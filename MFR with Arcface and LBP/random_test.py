@@ -56,6 +56,8 @@ for set in sets:
   if y_pred in set[0]:
     correct_predictions += 1
 
+print("Accuracy: ", correct_predictions / (len(os.listdir(data_path + "Genuine"))))
+
 
 #y[0] = [emb0-emb1]
 #y[1] = [emb0-emb2]
