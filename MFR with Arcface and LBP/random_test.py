@@ -68,14 +68,6 @@ print("Accuracy: ", correct_predictions / (len(os.listdir(data_path + "Genuine")
 #y[5] = [emb2-emb3]
 
 
-
-
-
-
-
-
-
-
 input('press Enter to continue test with another metric')
 #-------------------------------------------------------------------------#
 #another test metric
