@@ -4,8 +4,23 @@ import random
 import time
 from image_preprocessing import preprocess_img
 from scipy.spatial.distance import pdist
+from resnet_arcface import loadModel
+import sys
+import argparse
 
-data_path = "../MLFWTestset/"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+parser = argparse.ArgumentParser(description="Run Arcface model validation.")
+parser.add_argument("--path", type=str, default="../", help="mfr implementation path")
+args = parser.parse_args()
+_path = args.path
+
+sys.path.append(_path)
+print(_path)
+model_path = os.path.join(_path, 'model', 'Arcface-Res34.h5')
+model = loadModel(model_path)
+
+
+data_path = os.path.join(_path,"MLFWTestset")
 sets = []
 for dirname in os.listdir(data_path + "Genuine"):  #subfolder eg.10, 100,102
   # print("{}/{} Predicting {}".format(i+1, iterations, dirname))
