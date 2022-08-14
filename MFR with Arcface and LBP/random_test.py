@@ -23,7 +23,6 @@ model = loadModel(model_path)
 data_path = os.path.join(_path,"MLFWTestset")
 sets = []
 for dirname in os.listdir(data_path + "Genuine"):  #subfolder eg.10, 100,102
-  # print("{}/{} Predicting {}".format(i+1, iterations, dirname))
   genuine_path = data_path + "Genuine" + "/" + dirname + "/*"
   imposter_path = data_path + "Imposter" + "/*"
   genuine = random.sample([file for file in glob.glob(genuine_path)], 3)
