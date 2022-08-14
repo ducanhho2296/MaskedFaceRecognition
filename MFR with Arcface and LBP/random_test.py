@@ -50,19 +50,6 @@ for set in sets:
         embeddings.append(embedding)
   
   y = pdist(embeddings, metric='cosine') 
-  # if len(y) == 6: 
-  #   y0 = y[0] + y[1] + y[2]
-  #   y1 = y[0] + y[3] + y[4]
-  #   y2 = y[1] + y[3] + y[5]
-  #   y3 = y[2] + y[4] + y[5]
-  #   dist = [y0,y1,y2,y3]
-  # #find the highest distance => imposter
-  #   index_max = np.argmax(dist)
-  #   genuine = 'Genuine'
-  #   imposter = 'Imposter'
-  #   if imposter in set[index_max]:
-  #     correct_predictions += 1
-  # else: print(y)
 
   if y[0] < 0.55 or y[1] < 0.55 or y[2] < 0.55:
     y_pred = 'Genuine'
