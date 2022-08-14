@@ -3,8 +3,9 @@ import glob
 import random
 import time
 from image_preprocessing import preprocess_img
+from scipy.spatial.distance import pdist
 
-data_path = "/content/Testset/MLFWTestset/"
+data_path = "../MLFWTestset/"
 sets = []
 for dirname in os.listdir(data_path + "Genuine"):  #subfolder eg.10, 100,102
   # print("{}/{} Predicting {}".format(i+1, iterations, dirname))
@@ -14,6 +15,55 @@ for dirname in os.listdir(data_path + "Genuine"):  #subfolder eg.10, 100,102
   imposter = random.sample([file for file in glob.glob(imposter_path)], 1)
 
   sets.append(imposter + genuine)
+
+correct_predictions = 0
+genuine = 'Genuine'
+imposter = 'Imposter'
+
+for set in sets:
+  faces = []
+  frames = []
+  for i in set:
+    try:
+      face, frame, base_img = preprocess_img(i, target_size=(112,112))
+      faces.append(face)
+    except:
+      continue
+
+  embeddings = []
+  for face in faces:
+        embedding = model.predict(face)[0]
+        embeddings.append(embedding)
+  
+  y = pdist(embeddings, metric='cosine') 
+  # if len(y) == 6: 
+  #   y0 = y[0] + y[1] + y[2]
+  #   y1 = y[0] + y[3] + y[4]
+  #   y2 = y[1] + y[3] + y[5]
+  #   y3 = y[2] + y[4] + y[5]
+  #   dist = [y0,y1,y2,y3]
+  # #find the highest distance => imposter
+  #   index_max = np.argmax(dist)
+  #   genuine = 'Genuine'
+  #   imposter = 'Imposter'
+  #   if imposter in set[index_max]:
+  #     correct_predictions += 1
+  # else: print(y)
+  if y[0] < 0.55 or y[1] < 0.55 or y[2] < 0.55:
+    y_pred = 'Genuine'
+  else: y_pred = 'Imposter'
+  if y_pred in set[0]:
+    correct_predictions += 1
+
+
+correct_predictions
+#y[0] = [emb0-emb1]
+#y[1] = [emb0-emb2]
+#y[2] = [emb0-emb3]
+#y[3] = [emb1-emb2]
+#y[4] = [emb1-emb3]
+#y[5] = [emb2-emb3]
+
 
 
 
