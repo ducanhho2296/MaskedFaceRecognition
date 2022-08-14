@@ -3,7 +3,7 @@ import glob
 import random
 import time
 
-random.seed(2468)
+random.seed(2480)
 
 
 data_path = "../comask20_testset/"
