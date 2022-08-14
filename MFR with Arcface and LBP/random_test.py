@@ -2,11 +2,32 @@ import os
 import glob
 import random
 import time
+from image_preprocessing import preprocess_img
 
+data_path = "/content/Testset/MLFWTestset/"
+sets = []
+for dirname in os.listdir(data_path + "Genuine"):  #subfolder eg.10, 100,102
+  # print("{}/{} Predicting {}".format(i+1, iterations, dirname))
+  genuine_path = data_path + "Genuine" + "/" + dirname + "/*"
+  imposter_path = data_path + "Imposter" + "/*"
+  genuine = random.sample([file for file in glob.glob(genuine_path)], 3)
+  imposter = random.sample([file for file in glob.glob(imposter_path)], 1)
+
+  sets.append(imposter + genuine)
+
+
+
+
+
+
+
+
+
+input('press Enter to continue test with another metric')
+#-------------------------------------------------------------------------#
+#another test metric
 random.seed(2480)
-
-
-data_path = "../comask20_testset/"
+data_path = "../MLFWTestset/"
 correct_predictions = 0
 time_per_prediction = 0
 start_total = time.time()
