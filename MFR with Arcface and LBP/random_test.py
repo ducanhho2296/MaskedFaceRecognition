@@ -9,7 +9,7 @@ import sys
 import argparse
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-parser = argparse.ArgumentParser(description="Run Arcface model validation.")
+parser = argparse.ArgumentParser(description="Run Test metric.")
 parser.add_argument("--path", type=str, default="../", help="mfr implementation path")
 args = parser.parse_args()
 _path = args.path
