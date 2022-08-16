@@ -126,7 +126,6 @@ def preprocess_img(img, target_size=(112, 112),
 	#---------------------------------------------------
 	#normalizing the image pixels
 
-  img_pixels /= 255 #normalize input in [0, 1]
 
 	#---------------------------------------------------
 
