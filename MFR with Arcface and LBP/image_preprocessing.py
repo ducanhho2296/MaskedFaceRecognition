@@ -126,6 +126,7 @@ def preprocess_img(img, target_size=(112, 112),
   img_pixels = np.expand_dims(img, axis = 0)
   img_norm = img_pixels/255 #normalize input in [0, 1]
 
+  return img_norm, frame, base_img
 
 
 #############################################################################
