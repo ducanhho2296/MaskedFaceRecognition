@@ -9,7 +9,6 @@ import requests
 from tensorflow import keras
 
 
-
 def load_image(img):
 	exact_image = False; base64_img = False; url_img = False
 
