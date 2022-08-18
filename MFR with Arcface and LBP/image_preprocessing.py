@@ -7,7 +7,6 @@ from pathlib import Path
 from PIL import Image
 import requests
 from tensorflow import keras
-from tensorflow.keras.preprocessing import img_process
 
 
 
