@@ -60,7 +60,6 @@ for set in sets:
 print("Accuracy: ", correct_predictions / (len(os.listdir(data_path + "Genuine"))))
 
 
-
 input('press Enter to continue test with another metric')
 #-------------------------------------------------------------------------#
 #another test metric
