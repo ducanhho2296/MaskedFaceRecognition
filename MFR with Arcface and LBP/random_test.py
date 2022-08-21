@@ -59,7 +59,6 @@ for set in sets:
 
 print("Accuracy: ", correct_predictions / (len(os.listdir(data_path + "Genuine"))))
 
-#y[3] = [emb1-emb2]
 #y[4] = [emb1-emb3]
 #y[5] = [emb2-emb3]
 
