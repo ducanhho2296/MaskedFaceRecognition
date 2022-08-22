@@ -53,6 +53,10 @@ for set in sets:
 
 #y[0] = [emb0-emb1]
 #y[1] = [emb0-emb2]
+#y[2] = [emb0-emb3]
+#y[3] = [emb1-emb2]
+#y[4] = [emb1-emb3]
+#y[5] = [emb2-emb3]
   if y[0] < 0.55 or y[1] < 0.55 or y[2] < 0.55: 
     y_pred = 'Genuine'
   else: y_pred = 'Imposter'
