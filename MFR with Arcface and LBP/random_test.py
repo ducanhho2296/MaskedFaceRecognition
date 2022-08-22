@@ -52,6 +52,7 @@ for set in sets:
   y = pdist(embeddings, metric='cosine') 
 
   if y[0] < 0.55 or y[1] < 0.55 or y[2] < 0.55:
+  if y[0] < 0.55 or y[1] < 0.55 or y[2] < 0.55: 
     y_pred = 'Genuine'
   else: y_pred = 'Imposter'
   if y_pred in set[0]:
