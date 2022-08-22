@@ -52,6 +52,7 @@ for set in sets:
   y = pdist(embeddings, metric='cosine') 
 
 #y[0] = [emb0-emb1]
+#y[1] = [emb0-emb2]
   if y[0] < 0.55 or y[1] < 0.55 or y[2] < 0.55: 
     y_pred = 'Genuine'
   else: y_pred = 'Imposter'
