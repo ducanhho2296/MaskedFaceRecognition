@@ -122,6 +122,15 @@ def calculate_LBP(img_path):
         for i in range(len(eight_bit_binary)): 
             decimal_val += eight_bit_binary[i] * powers[i] 
             
+        return decimal_val 
+    m, n, _ = img.shape 
+    gray_scale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  #converting image to grayscale
+    lbp_img = np.zeros((m, n),np.uint8) 
+
+    # converting image to lbp
+    for i in range(0,m): 
+        for j in range(0,n): 
+            lbp_img[i, j] = local_bin_val(gray_scale, i, j) 
 
     n_bins1 = int(lbp_img.max() + 1)
     hist, _ = np.histogram(lbp_img, density=True, bins=n_bins1, range=(0, n_bins1))   #get the histogram for distance calculation task
