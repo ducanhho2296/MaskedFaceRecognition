@@ -122,4 +122,3 @@ def calculate_LBP(img_path):
         for i in range(len(eight_bit_binary)): 
             decimal_val += eight_bit_binary[i] * powers[i] 
             
-    return hist
