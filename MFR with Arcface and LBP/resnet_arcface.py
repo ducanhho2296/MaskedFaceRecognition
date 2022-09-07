@@ -68,5 +68,4 @@ def findCosineDistance(source_representation, test_representation):
 
 
 	model.load_weights(model_path)
-
 	return model
