@@ -75,6 +75,7 @@ def loadModel(model_path):
 	arcface_model = layers.Dropout(0.4)(arcface_model)
 	arcface_model = layers.Flatten()(arcface_model)
 	arcface_model = layers.Dense(512, activation=None, use_bias=True, kernel_initializer="glorot_normal")(arcface_model)
+
 	model = keras.models.Model(inputs, embedding, name=base_model.name)
 
 	model.load_weights(model_path)
