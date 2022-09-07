@@ -66,8 +66,6 @@ def findCosineDistance(source_representation, test_representation):
     else: print("not the same person")
     return dist
 
-	embedding = layers.BatchNormalization(momentum=0.9, epsilon=2e-5, name="embedding", scale=True)(arcface_model)
-	model = keras.models.Model(inputs, embedding, name=base_model.name)
 
 	model.load_weights(model_path)
 
