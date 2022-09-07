@@ -67,7 +67,6 @@ def findCosineDistance(source_representation, test_representation):
     return dist
 
 def loadModel(model_path):
-	base_model = ResNet34()
 	inputs = base_model.inputs[0]
 	arcface_model = base_model.outputs[0]
 	arcface_model = layers.BatchNormalization(momentum=0.9, epsilon=2e-5)(arcface_model)
