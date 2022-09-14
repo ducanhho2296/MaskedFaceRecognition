@@ -1,7 +1,7 @@
 # Masked-Face-Recognition-Challenge (MFR)
 This Repo was created for the Webface260M Masked Face Recognition Challenge project.
 
-In this session, I used the Retinaface-Resnet50 model for face detection task and a pretrained weights of the model Resnet34 using Arcface loss function and Local Binary Pattern (LBP) for recognition task as follow the paper: Masked face recognition with convolutional neural networks and local binary patterns
+In this session, I used the Retinaface-Resnet50 model for face detection task and a pretrained weights of the model Resnet34 using Arcface loss function and Local Binary Pattern (LBP) for recognition task as follow the paper: Masked face recognition with convolutional neural networks and local binary patterns from the Author Hoai Nam Vu et al.
 
 ## The Pipeline of algorithm:
 1.  Using the pre-trained Resnet50.onnx model to detect and extract cropped face and also Bounding Boxes. The cropped face will be fed in Arcface model. The bounding boxes will be used in LBP task.
