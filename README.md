@@ -35,7 +35,7 @@ The extracted self-defined ROIs will be encoded in LBP code and then output hist
 
 After that, using Cosine distance function to calculate distance between histogram of faces, which are already stored in an array. We calculate distances of all faces in the array, the shorter the distance, the more similar the faces are.
 
-## Testing Arcface model with COMASK20 Dataset of the paper
+## Testing Arcface model with COMASK20 Dataset 
 COMASK20 dataset contains real mask and also fake mask. I created a small subdataset of unmasked and real masked faces to testing the model.
 - Some examples of Masked Face Recognition and Verification results:
 
