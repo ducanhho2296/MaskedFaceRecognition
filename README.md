@@ -1,7 +1,7 @@
 # Masked-Face-Recognition-Challenge (MFR)
 This Repo was created for the Webface260M Masked Face Recognition Challenge project.
 
-In this session, I used the Retinaface-Resnet50 model for face detection task and a pretrained weights of the model Resnet34 using Arcface loss function and Local Binary Pattern (LBP) for recognition task as follow the paper: Masked face recognition with convolutional neural networks and local binary patterns
+In this session, I used the Retinaface-Resnet50 model for face detection task and a pretrained weights of the model Resnet34 using Arcface loss function and Local Binary Pattern (LBP) for recognition task as follow the paper: Masked face recognition with convolutional neural networks and local binary patterns from the Author Hoai Nam Vu et al.
 
 ## The Pipeline of algorithm:
 1.  Using the pre-trained Resnet50.onnx model to detect and extract cropped face and also Bounding Boxes. The cropped face will be fed in Arcface model. The bounding boxes will be used in LBP task.
@@ -29,11 +29,13 @@ At this task, I omitted the last layer (fully connected layer of resnet34, which
 
 The extracted self-defined ROIs will be encoded in LBP code and then output histogram of each ROI, thus the histograms are concatenated into a big histogram.
 
-![image](https://user-images.githubusercontent.com/92146886/177043628-4c7b872a-ea7c-429f-b04b-9636346196c6.png)
+![image](https://user-images.githubusercontent.com/92146886/189315208-a759eb3f-7d8e-44ba-a423-e31ef33f9094.png)
+
+
 
 After that, using Cosine distance function to calculate distance between histogram of faces, which are already stored in an array. We calculate distances of all faces in the array, the shorter the distance, the more similar the faces are.
 
-## Testing Arcface model with COMASK20 Dataset of the paper
+## Testing Arcface model with COMASK20 Dataset 
 COMASK20 dataset contains real mask and also fake mask. I created a small subdataset of unmasked and real masked faces to testing the model.
 - Some examples of Masked Face Recognition and Verification results:
 
