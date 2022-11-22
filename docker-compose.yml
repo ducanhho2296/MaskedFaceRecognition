@@ -1,1 +1,7 @@
 version: '3.4'
+services:
+  ailabmaskedfacerecognitionchallenge:
+    image: ailabmaskedfacerecognitionchallenge
+    build:
+      context: .
+      dockerfile: ./Dockerfile
