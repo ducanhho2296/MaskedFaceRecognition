@@ -44,8 +44,8 @@ COMASK20 dataset contains real mask and also fake mask. I created a small subdat
 ### Accuracy of model with- and without using LBP as double assurance method
 | Tables                   | Accuracy      | F1-Score|
 | -------------            |:-------------:|---------|
-| Arcface without LBP      | 96.4%         |0.68     |
-| Arcface with LBP         | 99.76%        |0.73     |
+| Arcface without LBP      | 90.12%         |0.68     |
+| Arcface with LBP         | 93.02%        |0.73     |
 
 ### ROC Curve
 |![image](https://user-images.githubusercontent.com/92146886/181904432-21745149-e840-4ebe-88a1-73634834f477.png)|![image](https://user-images.githubusercontent.com/92146886/181904437-e5b8071f-bce9-4662-87ec-afa8df9fc098.png)|
