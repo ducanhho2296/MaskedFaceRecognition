@@ -6,8 +6,8 @@ import cv2
 from sklearn import metrics
 from sklearn.metrics import f1_score
 import matplotlib.pyplot as plt
-from ROI_extraction import extract_ROI
-from resnet_arcface import findCosineDistance
+from utils.ROI_extraction import extract_ROI
+from utils.resnet_arcface import findCosineDistance
 import argparse
 import sys
 
@@ -19,15 +19,14 @@ args = parser.parse_args()
 _path = args.path
 
 sys.path.append(_path)
-#---create a repository to store model.h5, create folder to store test-set
-# !mkdir model
-#!mkdir testsets
+"""---create a repository to store model.h5, create folder to store test-set
 #---download model from gg drive
-# import gdown
-# !gdown 1LVB3CdVejpmGHM28BpqqkbZP5hDEcdZY
+# !gdown 1LVB3CdVejpmGHM28BpqqkbZP5hDEcdZY"""
 
 #load model
-from resnet_arcface import loadModel
+from utils.resnet_arcface import loadModel
+from utils.image_preprocessing import *
+
 
 model_path = os.path.join(_path, 'model', 'arcface_weights.h5')
 model = loadModel(model_path)
@@ -50,10 +49,6 @@ for face in frames:
   hist = extract_ROI(face)
   hists.append(hist)
   
-#store all cos_distance into a tuple 
-#if cos = 1 and label1 == label2 => True Positive
-#if cos = 0 and label1 != label2 => True negative
-#if cos = 0.5, put these faces into a tuple, after that run LBP to choose min distance.
 
 label_flags = []  #tuple of ground true, y_test
 label_flag = 0    #ground true, 2 faces have the same label => label_flag = 1 

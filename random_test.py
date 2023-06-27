@@ -2,9 +2,9 @@ import os
 import glob
 import random
 import time
-from image_preprocessing import preprocess_img
+from utils.image_preprocessing import preprocess_img
 from scipy.spatial.distance import pdist
-from resnet_arcface import loadModel
+from utils.resnet_arcface import loadModel
 import sys
 import argparse
 
