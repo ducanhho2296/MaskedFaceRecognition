@@ -1,4 +1,6 @@
 # Masked-Face-Recognition-Challenge (MFR)
+<img src="https://img.shields.io/badge/Keras%20-%23D00000.svg?&style=for-the-badge&logo=Keras&logoColor=white"/> <img src="https://img.shields.io/badge/TensorFlow%20-%23FF6F00.svg?&style=for-the-badge&logo=TensorFlow&logoColor=white" />
+
 This Repo was created for the Webface260M Masked Face Recognition Challenge project.
 - Link to Colab:
  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ducanhho2296/Masked-Face-Recognition-Challenge/blob/main/Arcface_Masked_face_recognition.ipynb)
